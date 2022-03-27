@@ -3,7 +3,6 @@ package frame
 import (
 	"encoding/binary"
 	"errors"
-	"fmt"
 	"io"
 )
 
@@ -43,6 +42,5 @@ func Encode(w io.Writer, payload []byte) error {
 	if n != len(payload) {
 		return ErrShortWrite
 	}
-	fmt.Println("write success")
 	return nil
 }
