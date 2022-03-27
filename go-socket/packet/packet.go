@@ -22,11 +22,6 @@ const (
 var ErrShortRead = errors.New("short read")
 var ErrShortWrite = errors.New("short write")
 
-type Codec interface {
-	Decode([]byte) error
-	Encode() ([]byte, error)
-}
-
 type Packet struct {
 	Command int8
 	Uuid    string //36字节
